@@ -22,6 +22,8 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    ["<leader>uU"] = { "<cmd>UndotreeToggle<CR>", desc = "Toggle Undotree" },
+  },
   i = {
     -- ["<tab>"] = {"", desc="Bringing back tab"}
   },

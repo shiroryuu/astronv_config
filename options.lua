@@ -18,6 +18,8 @@ return {
     incsearch = true,
     backup = false,
     swapfile = false,
+    undofile = true,
+    undodir = os.getenv "XDG_STATE_HOME" .. "/nvim/undodir",
   },
   g = {
     mapleader = " ", -- sets vim.g.mapleader
