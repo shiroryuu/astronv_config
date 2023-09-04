@@ -8,5 +8,10 @@ return {
   { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.colorscheme.gruvbox-nvim" },
 
-  -- { import = "astrocommunity.completion.copilot-lua-cmp" },
+  -- Motion Packs
+  { import = "astrocommunity.motion.harpoon" },
+  { import = "astrocommunity.motion.nvim-surround" },
+
+  -- Language Packs
+  { import = "astrocommunity.pack.rust" },
 }
