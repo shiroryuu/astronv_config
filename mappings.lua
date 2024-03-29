@@ -3,9 +3,14 @@
 -- Please use this mappings table to set keyboard mapping since this is the
 -- lower level configuration and more robust one. (which-key will
 -- automatically pick-up stored data by this setting.)
-return {
+-- local utils = require "user.utils"
+local astro_utils = require "astronvim.utils"
+local mappings = {
   -- first key is the mode
   n = {
+    -- disable default bindings
+    ["<C-s>"] = false,
+    ["<C-q>"] = false,
     -- second key is the lefthand side of the map
     -- mappings seen under group name "Buffer"
     ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
@@ -16,6 +21,16 @@ return {
         )
       end,
       desc = "Pick to close",
+    },
+    ["<Tab>"] = {
+      function()
+        if #vim.t.bufs > 1 then
+          require("telescope.builtin").buffers { sort_mru = true, ignore_current_buffer = true }
+        else
+          astro_utils.notify "No other buffers open"
+        end
+      end,
+      desc = "Switch Buffers",
     },
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
@@ -36,3 +51,5 @@ return {
     -- ["<esc>"] = false,
   },
 }
+
+return mappings
