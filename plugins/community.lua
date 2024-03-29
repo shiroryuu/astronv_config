@@ -8,6 +8,9 @@ return {
   { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.colorscheme.gruvbox-nvim" },
 
+  -- Editing Support
+  { import = "astrocommunity.editing-support.todo-comments-nvim" },
+
   -- Motion Packs
   { import = "astrocommunity.motion.harpoon" },
   { import = "astrocommunity.motion.nvim-surround" },
